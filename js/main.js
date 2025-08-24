@@ -81,3 +81,9 @@ submitButton.addEventListener("click", function () {
     );
 });
 // contact form
+
+// block adding string
+
+document.getElementById("phone").addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "");
+});
