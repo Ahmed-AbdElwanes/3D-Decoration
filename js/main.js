@@ -42,8 +42,8 @@ if (serviceNumber === 1) {
 
 // contact form
 
-// تهيئة EmailJS باستخدام المفتاح العام
-// emailjs.init("B5mlJVPHawvC7A7ig"); // استبدل YOUR_PUBLIC_KEY بالمفتاح العام من EmailJS
+// Initialize EmailJS with your user ID
+// emailjs.init("B5mlJVPHawvC7A7ig"); // replace it with YOUR_PUBLIC_KEY EmailJS
 
 submitButton.addEventListener("click", function () {
   const name = document.getElementById("name").value;
@@ -58,9 +58,12 @@ submitButton.addEventListener("click", function () {
     return;
   }
 
-  // إرسال البيانات عبر EmailJS
+  // service ID: service_8k4245m
+
+  // (service-id, template-id, user-id)
+  // Send message by EmailJS
   emailjs
-    .send("service_tsyz6jj", "template_qynje98", {
+    .send("service_f9mfcvd", "template_f7i1e0m", {
       name: name,
       phone: phone,
       feedback: feedback
