@@ -7,6 +7,8 @@ const submitButton = document.getElementById("submit-btn");
 toggleBtn.addEventListener("click", function () {
   const menu = document.getElementById("mobile-menu-2");
   menu.classList.toggle("hidden");
+
+  // control the icon toggle
   if (menu.classList.contains("hidden")) {
     toggleBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
   } else {
