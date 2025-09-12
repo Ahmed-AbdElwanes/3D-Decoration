@@ -7,6 +7,11 @@ const submitButton = document.getElementById("submit-btn");
 toggleBtn.addEventListener("click", function () {
   const menu = document.getElementById("mobile-menu-2");
   menu.classList.toggle("hidden");
+  if (menu.classList.contains("hidden")) {
+    toggleBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+  } else {
+    toggleBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  }
 });
 
 //   Close the mobile menu when a menu item is clicked
