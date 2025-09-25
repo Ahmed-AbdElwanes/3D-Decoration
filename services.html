@@ -71,9 +71,9 @@
         <section id="service1" class="service1">
           <div class="container mx-auto px-4 py-8 max-w-4xl">
             <div>
-              <h1 class="text-3xl font-bold text-gray-800 mb-4">
+              <h2 class="text-3xl font-bold text-gray-800 mb-4">
                 التشطيبات الداخلية
-              </h1>
+              </h2>
               <p class="text-gray-600 mb-4">
                 التشطيبات الداخلية هي المرحلة النهائية في أي مشروع بناء أو
                 تجديد، وهي التي تمنح الفراغ طابعه النهائي وتأثيره الجمالي
@@ -244,9 +244,9 @@
         <!-- service 2 -->
         <section id="service2" class="service2 mt-10">
           <div class="container mx-auto px-4 py-8 max-w-4xl">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
               التشطيبات الطبية
-            </h1>
+            </h2>
             <p class="text-gray-600 mb-4">
               التشطيبات الطبية هي مجموعة من الأعمال النهائية التي تُنفذ في
               المنشآت الصحية مثل المستشفيات، العيادات، والمختبرات. تختلف هذه
@@ -409,9 +409,9 @@
         <!-- service 3 -->
         <section id="service3" class="service3 mt-10">
           <div class="mx-auto px-4 py-8 max-w-4xl">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
               أبواب غرف العلاج الإشعاعي والأشعة
-            </h1>
+            </h2>
             <p class="text-gray-600 mb-4">
               تُعد الأبواب الأوتوماتيكية لغرف العلاج الإشعاعي جزءًا حيويًا من
               أنظمة الأمان والحماية في المنشآت الطبية. هذه الأبواب مصممة خصيصًا
@@ -549,9 +549,9 @@
         <!-- service 4 -->
         <section id="service4" class="service4 mt-10">
           <div class="mx-auto px-4 py-8 max-w-4xl">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">
               الأرضيات الإيبوكسية واليوريثان (يوريثان كونكريت)
-            </h1>
+            </h2>
             <p class="text-gray-600 mb-4">
               الأرضيات الإيبوكسية واليوريثان (يوريثان كونكريت) هي حلول متطورة
               لمشاكل الأرضيات التقليدية في مختلف أنواع المنشآت، حيث توفر حماية
@@ -797,34 +797,11 @@
 
       // trnslation effects
 
-      const htmlElement = document.documentElement;
-      const textElements = document.querySelectorAll(
-        "p, h2, h3, h4, h5, h6, li, caption"
-      );
-      const lang = htmlElement.getAttribute("lang");
-
-      console.log("current lang", htmlElement.getAttribute("lang"));
-
-      if (lang !== "ar") {
-        document.body.classList.remove("text-right");
-        document.body.classList.add("text-left");
-        textElements.forEach((element) => {
-          element.setAttribute("dir", "ltr");
-        });
-        console.log("Language set to English", lang);
-      } else {
-        document.body.classList.remove("text-left");
-        document.body.classList.add("text-right");
-        textElements.forEach((element) => {
-          element.setAttribute("dir", "rtl");
-        });
-      }
-
-      //
-      //
-      //
       document.addEventListener("DOMContentLoaded", () => {
         const htmlElement = document.documentElement;
+        const textElements = document.querySelectorAll(
+          "p, h2, h3, h4, h5, h6, li, caption"
+        );
 
         // دالة لتحديث اتجاه العناصر بناءً على اللغة
         function updateDirection(lang) {
