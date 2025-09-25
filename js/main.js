@@ -53,20 +53,21 @@ if (serviceNumber === 1) {
 // emailjs.init("B5mlJVPHawvC7A7ig"); // replace it with YOUR_PUBLIC_KEY EmailJS
 
 submitButton.addEventListener("click", function () {
+  const status = document.getElementById("status");
   // disable the button
   this.setAttribute("aria-disabled", "true");
   this.setAttribute("disabled", "");
-  // this.textContent = "جاري الإرسال...";
+  status.innerHTML = `<i class="fa-solid fa-spinner rotate-180 animate-spin text-orange-500"></i>`;
   this.classList.add("opacity-50");
 
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const feedback = document.getElementById("feedback").value;
-  const status = document.getElementById("status");
 
   if (!name || !phone || !feedback) {
     submitButton.setAttribute("disabled", "true");
     status.textContent = "يرجى ملء جميع الحقول";
+
     status.classList.add("text-red-500");
 
     setTimeout(() => {
