@@ -757,8 +757,10 @@
         >
       </div>
     </main>
-    <footer class="bg-gray-800 text-white py-4 text-center mt-3">
-      <p dir="rtl">جميع الحقوق محفوظة &copy; 2025 3D House Decoration</p>
+    <footer class="bg-gray-800 text-white py-4 mt-3">
+      <p dir="rtl" class="mx-auto w-fit">
+        جميع الحقوق محفوظة &copy; 2025 3D House Decoration
+      </p>
     </footer>
     <!-- Js -->
     <script>
@@ -790,6 +792,86 @@
         images.forEach((img) => {
           img.setAttribute("loading", "lazy");
           img.classList.add("shadow-2xl");
+        });
+      });
+
+      // trnslation effects
+
+      const htmlElement = document.documentElement;
+      const textElements = document.querySelectorAll(
+        "p, h2, h3, h4, h5, h6, li, caption"
+      );
+      const lang = htmlElement.getAttribute("lang");
+
+      console.log("current lang", htmlElement.getAttribute("lang"));
+
+      if (lang !== "ar") {
+        document.body.classList.remove("text-right");
+        document.body.classList.add("text-left");
+        textElements.forEach((element) => {
+          element.setAttribute("dir", "ltr");
+        });
+        console.log("Language set to English", lang);
+      } else {
+        document.body.classList.remove("text-left");
+        document.body.classList.add("text-right");
+        textElements.forEach((element) => {
+          element.setAttribute("dir", "rtl");
+        });
+      }
+
+      //
+      //
+      //
+      document.addEventListener("DOMContentLoaded", () => {
+        const htmlElement = document.documentElement;
+
+        // دالة لتحديث اتجاه العناصر بناءً على اللغة
+        function updateDirection(lang) {
+          if (lang === "en") {
+            htmlElement.setAttribute("dir", "ltr");
+            document.body.classList.remove("text-right");
+            document.body.classList.add("text-left");
+            textElements.forEach((element) => {
+              element.setAttribute("dir", "ltr");
+              element.classList.remove("text-right");
+              element.classList.add("text-left");
+            });
+          } else {
+            htmlElement.setAttribute("dir", "rtl");
+            document.body.classList.remove("text-left");
+            document.body.classList.add("text-right");
+            textElements.forEach((element) => {
+              element.setAttribute("dir", "rtl");
+              element.classList.remove("text-left");
+              element.classList.add("text-right");
+            });
+          }
+        }
+
+        // الوصول إلى السمة lang مباشرة
+        const initialLang = htmlElement.getAttribute("lang");
+        console.log(`اللغة الحالية:${initialLang}`);
+        updateDirection(initialLang);
+
+        // إعداد MutationObserver لمراقبة تغييرات السمة lang
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (
+              mutation.type === "attributes" &&
+              mutation.attributeName === "lang"
+            ) {
+              const newLang = htmlElement.getAttribute("lang");
+              console.log(`تم تغيير اللغة إلى: ${newLang}`);
+              updateDirection(newLang);
+            }
+          });
+        });
+
+        // مراقبة التغييرات على السمة lang في عنصر html
+        observer.observe(htmlElement, {
+          attributes: true,
+          attributeFilter: ["lang"]
         });
       });
     </script>
