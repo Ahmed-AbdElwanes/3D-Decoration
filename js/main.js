@@ -53,6 +53,12 @@ if (serviceNumber === 1) {
 // emailjs.init("B5mlJVPHawvC7A7ig"); // replace it with YOUR_PUBLIC_KEY EmailJS
 
 submitButton.addEventListener("click", function () {
+  // disable the button
+  this.setAttribute("aria-disabled", "true");
+  this.setAttribute("disabled", "");
+  // this.textContent = "جاري الإرسال...";
+  this.classList.add("opacity-50");
+
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
   const feedback = document.getElementById("feedback").value;
@@ -62,6 +68,13 @@ submitButton.addEventListener("click", function () {
     submitButton.setAttribute("disabled", "true");
     status.textContent = "يرجى ملء جميع الحقول";
     status.classList.add("text-red-500");
+
+    setTimeout(() => {
+      this.classList.remove("opacity-50", "cursor-not-allowed");
+      this.removeAttribute("aria-disabled");
+      this.removeAttribute("disabled");
+    }, 500);
+
     return;
   }
 
@@ -83,10 +96,21 @@ submitButton.addEventListener("click", function () {
         document.getElementById("name").value = "";
         document.getElementById("phone").value = "";
         document.getElementById("feedback").value = "";
+        setTimeout(() => {
+          submitButton.classList.remove("opacity-50");
+          submitButton.removeAttribute("aria-disabled");
+          submitButton.removeAttribute("disabled");
+        }, 500);
       },
       function (error) {
         status.textContent = "حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى";
         status.classList.add("text-red-500");
+
+        setTimeout(() => {
+          submitButton.classList.remove("opacity-50");
+          submitButton.removeAttribute("aria-disabled");
+          submitButton.removeAttribute("disabled");
+        }, 500);
       }
     );
 });
