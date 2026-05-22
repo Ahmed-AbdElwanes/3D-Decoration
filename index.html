@@ -62,8 +62,48 @@
     <!-- Alternate Language Version -->
     <link rel="alternate" hreflang="ar-EG" href="https://3decoration.net/" />
 
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="media/logo.png" />
+    <!-- Favicons -->
+    <!-- Main Favicon  -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!--  PNG -->
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="./faveico/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="./faveico/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <!--  Android PWA icons -->
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="./faveico/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="./faveico/android-chrome-512x512.png"
+      type="image/png"
+    />
+
+    <!-- Manifest to support web icons -->
+    <link rel="manifest" href="./faveico/site.webmanifest" />
+
+    <!-- Apple icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./faveico/apple-touch-icon.png"
+    />
+    <!-- Favicons -->
 
     <!-- Css  -->
     <!-- Tailwind -->
@@ -234,6 +274,8 @@
                 class="h-70 w-90"
                 src="media/services/service-1/9.jpg"
                 alt="صالة استقبال فاخرة بتصميم داخلي عصري وأرضيات خشبية"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="cart-info w-full absolute bottom-0 right-0 bg-white opacity-85 p-4"
@@ -246,6 +288,7 @@
                     للمنازل والشقق والفلل بأعلى معايير الجودة.
                   </p>
                   <button
+                    type="button"
                     data-serve="1"
                     aria-label="اعرف المزيد عن خدمات التشطيبات الداخلية"
                     class="bg-orange-500 text-white px-4 py-2 mt-5 rounded-lg hover:bg-orange-600 transition-colors duration-300"
@@ -264,6 +307,8 @@
                 class="h-70 w-90"
                 src="media/services/service-2/25.jpg"
                 alt="ردهة انتظار مستشفى بتصميم داخلي وأرضيات سيراميك أنيقة"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="cart-info w-full absolute bottom-0 right-0 bg-white opacity-85 p-4"
@@ -276,6 +321,7 @@
                     وعزل غرف الأشعة والعلاج الاشعاعي بأعلى معايير الجودة.
                   </p>
                   <button
+                    type="button"
                     data-serve="2"
                     aria-label="اعرف المزيد عن خدمات التشطيبات الطبية"
                     class="bg-orange-500 text-white px-4 py-2 mt-5 rounded-lg hover:bg-orange-600 transition-colors duration-300"
@@ -294,6 +340,8 @@
                 class="h-70 w-90"
                 src="media/services/service-3/service-3.jpg"
                 alt="باب علاج إشعاعي بتصميم حديث لغرفة أشعة بمستشفى"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="cart-info w-full absolute bottom-0 right-0 bg-white opacity-85 p-4"
@@ -308,6 +356,7 @@
                     بأعلى معايير الجودة.
                   </p>
                   <button
+                    type="button"
                     data-serve="3"
                     aria-label="اعرف المزيد عن خدمات تصميم وتركيب أبواب علاج إشعاعي"
                     class="bg-orange-500 text-white px-4 py-2 mt-5 rounded-lg hover:bg-orange-600 transition-colors duration-300"
@@ -325,6 +374,8 @@
                 class="h-70 w-90"
                 src="media/services/service-4/16.jpg"
                 alt="أرضية إيبوكسية زرقاء بتصميم عصري في مستشفى"
+                loading="lazy"
+                decoding="async"
               />
               <div
                 class="cart-info w-full absolute bottom-0 right-0 bg-white opacity-85 p-4"
@@ -340,6 +391,7 @@
                     المنشآت
                   </p>
                   <button
+                    type="button"
                     data-serve="4"
                     aria-label="اعرف المزيد عن خدمات الأرضيات الإيبوكسية واليوكريت"
                     class="bg-orange-500 text-white px-4 py-2 mt-5 rounded-lg hover:bg-orange-600 transition-colors duration-300"
@@ -597,6 +649,7 @@
                 href="https://wa.me/201066272714"
                 aria-label="تواصل معنا عبر واتساب"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
@@ -604,6 +657,8 @@
                 class="text-blue-600 text-3xl mx-3 inline-block hover:scale-110 transition-transform duration-200"
                 href="https://www.facebook.com/share/1CpJ7h1a7a/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="تابعنا على فيسبوك"
               >
                 <i class="fa-brands fa-facebook"></i>
               </a>
@@ -611,6 +666,8 @@
                 class="text-red-600 text-3xl inline-block hover:scale-110 transition-transform duration-200"
                 href="https://www.instagram.com/3d_house_decoration?igsh=MWRndDJ4bDl3MTNpMw=="
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="تابعنا على إنستغرام"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
@@ -725,9 +782,11 @@
                 >
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="افتح موقع 3D House Decoration على خرائط جوجل"
                     href="https://maps.app.goo.gl/KYkutVqhUUPxBscG9"
                   >
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                     <span class="text-sm font-medium mx-1"
                       >٢ش ابو بكر الصديق بمساكن الشروق-القاهرة</span
                     >

@@ -6,11 +6,11 @@
     <title>خدمات 3D House Decoration</title>
     <meta
       name="description"
-      content="شركة متخصصة في أعمال الديكور، التشطيبات الداخلية والطبية، أبواب الرصاص، تصميم داخلي، ترميم وتجديد المنازل والمستشفيات. خدمات احترافية بأعلى جودة."
+      content="شركة متخصصة في أعمال الديكور، التشطيبات الداخلية والطبية، أبواب الرصاص، تصميم داخلي، ترميم وتجديد المنازل والمستشفيات وعمل الارضيات الايبوكسي. خدمات احترافية بأعلى جودة."
     />
     <meta
       name="keywords"
-      content="تشطيبات داخلية, تشطيبات طبية, أبواب رصاص, أرضيات إيبوكسي, تصميم داخلي, ديكور منازل, ديكور مستشفيات, ترميم فلل, عزل إشعاعي, ديكور القاهرة, تصميم عيادات, ديكور مكاتب, أرضيات يوريثان, ديكور فلل, إضاءة ديكور"
+      content="تشطيبات داخلية, تشطيبات طبية,3 decoration,  أبواب رصاص, أرضيات إيبوكسي, تصميم داخلي, ديكور منازل, ديكور مستشفيات, ترميم فلل, عزل إشعاعي, ديكور القاهرة, تصميم عيادات, ديكور مكاتب, أرضيات يوريثان, ديكور فلل, إضاءة ديكور"
     />
     <meta
       property="og:title"
@@ -41,6 +41,49 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicons -->
+    <!-- Main Favicon  -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!--  PNG -->
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="./faveico/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="./faveico/favicon-32x32.png"
+      type="image/png"
+    />
+
+    <!--  Android PWA icons -->
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="./faveico/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="./faveico/android-chrome-512x512.png"
+      type="image/png"
+    />
+
+    <!-- Manifest to support web icons -->
+    <link rel="manifest" href="./faveico/site.webmanifest" />
+
+    <!-- Apple icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./faveico/apple-touch-icon.png"
+    />
+    <!-- Favicons -->
   </head>
   <body class="bg-gray-200 text-right">
     <header id="header">
@@ -726,16 +769,14 @@
           <video
             muted
             loop
+            playsinline
+            preload="none"
             class="w-full h-auto"
             poster="media/logo.jpg"
             id="autoPlayVideo"
           >
             <source src="media/video.mp4" type="video/mp4" />
             <source src="media/video.webm" type="video/webm" />
-            <caption>
-              فيديو توضيحي عن تصميم وتركيب الأبواب الأوتوماتيكية والتشطيبات
-              الطبية
-            </caption>
           </video>
         </div>
         <!-- video -->
@@ -745,7 +786,7 @@
         title="العودة إلى الأعلى"
       >
         <a href="#header" aria-label="العودة إلى أعلى الصفحة"
-          ><i class="fa-solid fa-arrow-up"></i
+          ><i class="fa-solid fa-arrow-up" aria-hidden="true"></i
         ></a>
       </div>
       <div class="text-center mt-10">

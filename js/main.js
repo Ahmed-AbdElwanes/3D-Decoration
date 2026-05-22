@@ -10,9 +10,11 @@ toggleBtn.addEventListener("click", function () {
 
   // control the icon toggle
   if (menu.classList.contains("hidden")) {
-    toggleBtn.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+    toggleBtn.innerHTML = `<i class="fa-solid fa-bars" aria-hidden="true"></i>`;
+    toggleBtn.setAttribute("aria-expanded", "false");
   } else {
-    toggleBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+    toggleBtn.innerHTML = `<i class="fa-solid fa-xmark" aria-hidden="true"></i>`;
+    toggleBtn.setAttribute("aria-expanded", "true");
   }
 });
 
@@ -79,10 +81,6 @@ submitButton.addEventListener("click", function () {
     return;
   }
 
-  // service ID: service_8k4245m
-
-  // (service-id, template-id, user-id)
-  // Send message by EmailJS
   emailjs
     .send("service_f9mfcvd", "template_f7i1e0m", {
       name: name,
